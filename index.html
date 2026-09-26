@@ -83,6 +83,13 @@ body{background:#fffaf1}.wrap{max-width:560px!important;margin:auto!important;pa
   .daysIntro h2{font-size:28px!important;white-space:nowrap!important}
   .daysIntro .small{font-size:11px!important;text-align:right!important;max-width:120px!important}
 }
+</style><style id="day-image-text-fix">
+/* Destination artwork contains decorative title text near its edges.
+   Keep the complete artwork visible on narrow screens instead of cropping it. */
+.dayRail>.day .dayPhoto{object-fit:contain!important;object-position:center top!important;background:#eaf3f4!important;height:auto!important;aspect-ratio:16/10!important}
+@media(max-width:620px){
+  .dayRail>.day .dayPhoto{width:100%!important;height:auto!important;aspect-ratio:16/10!important;object-fit:contain!important;object-position:center top!important}
+}
 </style></head><body><main class="wrap">
 <div class="hero"><img src="assets/hero.png" alt="Illustrated Mount Fuji, pagoda and cherry blossoms"><div class="heroText"><div class="eyebrow">FAMILY TRIP · JAPAN</div><h1>Japan 2026</h1><p>September 27 – October 10 · our itinerary + family travel log</p></div></div>
 <div class="tripTabs"><div class="tripCity tokyo">Tokyo</div><div class="tripCity fuji">Fuji</div><div class="tripCity kyoto">Kyoto</div><div class="tripCity nara">Nara</div><div class="tripCity kamakura">Kamakura</div></div><div class="nav" id="dayNav"></div><div id="globalActions"></div><section id="today" class="active"></section><section id="itinerary"></section><section id="journal"></section><section id="stays"></section><section id="packing"></section><div class="credit">Illustrated for our Japan family adventure · Family journal photos stay private to signed-in users.</div></main>
