@@ -50,6 +50,24 @@ body{background:#fffaf1}.wrap{max-width:560px!important;margin:auto!important;pa
 .hungryBtn .actionArt{object-position:center!important}.checkBtn .actionArt{object-position:center!important}
 .dayPhoto{object-fit:cover!important;object-position:center!important}
 @media(max-width:620px){.hero img{object-position:center 42%!important}.actionArt{border-radius:15px!important}}
+</style><style id="ghosting-fix">
+/* Uploaded artwork already contains its own typography. Do not layer live labels over it. */
+.hero{height:270px!important;overflow:hidden!important;background:#dff3ff!important}
+.hero img{width:100%!important;height:auto!important;min-height:0!important;object-fit:initial!important;display:block!important;transform:translateY(-28px)!important}
+.hero:after{display:none!important}
+.heroText{display:none!important}
+
+.actionBar{grid-template-columns:1fr 1fr!important;gap:10px!important}
+.actionBig{display:block!important;padding:0!important;min-height:0!important;height:auto!important;border:0!important;background:transparent!important;box-shadow:none!important;overflow:hidden!important}
+.actionBig>div{display:none!important}
+.actionBig .actionArt{display:block!important;width:100%!important;height:auto!important;max-width:none!important;object-fit:contain!important;border-radius:20px!important}
+
+.dayPhoto{object-fit:cover!important}
+@media(max-width:620px){
+ .hero{height:258px!important}
+ .hero img{transform:translateY(-24px)!important}
+ .actionBig .actionArt{width:100%!important;height:auto!important;border-radius:18px!important}
+}
 </style></head><body><main class="wrap">
 <div class="hero"><img src="assets/hero.png" alt="Illustrated Mount Fuji, pagoda and cherry blossoms"><div class="heroText"><div class="eyebrow">FAMILY TRIP · JAPAN</div><h1>Japan 2026</h1><p>September 27 – October 10 · our itinerary + family travel log</p></div></div>
 <div class="tripTabs"><div class="tripCity tokyo">Tokyo</div><div class="tripCity fuji">Fuji</div><div class="tripCity kyoto">Kyoto</div><div class="tripCity nara">Nara</div><div class="tripCity kamakura">Kamakura</div></div><div class="nav" id="dayNav"></div><div id="globalActions"></div><section id="today" class="active"></section><section id="itinerary"></section><section id="journal"></section><section id="stays"></section><section id="packing"></section><div class="credit">Illustrated for our Japan family adventure · Family journal photos stay private to signed-in users.</div></main>
