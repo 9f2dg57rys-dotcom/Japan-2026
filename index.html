@@ -90,6 +90,37 @@ body{background:#fffaf1}.wrap{max-width:560px!important;margin:auto!important;pa
 @media(max-width:620px){
   .dayRail>.day .dayPhoto{width:100%!important;height:auto!important;aspect-ratio:16/10!important;object-fit:contain!important;object-position:center top!important}
 }
+</style><style id="mobile-visual-cleanup">
+@media(max-width:620px){
+  /* Hero: image is the complete hero, so remove the old overlay panel treatment. */
+  .hero{height:auto!important;min-height:0!important;margin:0 -10px 14px!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:hidden!important}
+  .hero img{position:relative!important;display:block!important;width:100%!important;height:auto!important;min-height:0!important;object-fit:contain!important;opacity:1!important;filter:none!important}
+  .hero:after,.heroText{display:none!important}
+
+  /* Remove the empty blue/green block left behind by the former hero layout. */
+  .hero + .tripTabs{margin-top:10px!important}
+
+  /* Destination bubbles: one consistent pill system. */
+  .tripTabs{display:flex!important;gap:8px!important;overflow-x:auto!important;padding:0 10px 5px!important;margin:0 -10px 4px!important;scrollbar-width:none!important}
+  .tripCity{flex:0 0 128px!important;min-width:128px!important;height:58px!important;display:flex!important;align-items:center!important;justify-content:center!important;border-radius:29px!important;padding:0 12px!important;font-size:17px!important;line-height:1!important;border:1px solid rgba(0,0,0,.035)!important}
+  .tripCity.tokyo{background:#d9f1e3!important}.tripCity.fuji{background:#d9ebfa!important}.tripCity.kyoto{background:#fde0dc!important}.tripCity.nara{background:#fae9bd!important}.tripCity.kamakura{background:#e9dff7!important}
+
+  /* Day bubbles: same radius, border weight and visual language as destination pills. */
+  .nav{gap:10px!important;margin:0 -10px 12px!important;padding:0 10px 8px!important;overflow-x:auto!important}
+  .nav button{flex:0 0 128px!important;min-width:128px!important;width:128px!important;height:128px!important;border-radius:30px!important;padding:14px 8px!important;border:1px solid rgba(0,0,0,.045)!important;box-shadow:none!important}
+  .nav button b{font-size:29px!important;line-height:1!important}.nav .dow{font-size:17px!important;margin-top:13px!important}
+
+  /* Action artwork should meet cleanly without the accidental white seam. */
+  .actionBar{gap:10px!important;margin:8px 10px 22px!important}
+  .actionBig{border-radius:24px!important;overflow:hidden!important;min-height:210px!important;padding:8px 10px!important;grid-template-columns:minmax(0,47%) minmax(0,53%)!important}
+  .actionArt{width:100%!important;height:170px!important;object-fit:contain!important}
+  .actionBig b{font-size:25px!important;line-height:1.08!important}.actionBig span{font-size:15px!important;line-height:1.3!important}
+  .hungryBtn{border:1.5px solid #efc46c!important}.checkBtn{border:1.5px solid #8fcdae!important}
+
+  /* Keep page content clear of the fixed app navigation. */
+  .dayRail{padding-bottom:105px!important}
+  .bottom{z-index:50!important}
+}
 </style></head><body><main class="wrap">
 <div class="hero"><img src="assets/hero.png" alt="Illustrated Mount Fuji, pagoda and cherry blossoms"><div class="heroText"><div class="eyebrow">FAMILY TRIP · JAPAN</div><h1>Japan 2026</h1><p>September 27 – October 10 · our itinerary + family travel log</p></div></div>
 <div class="tripTabs"><div class="tripCity tokyo">Tokyo</div><div class="tripCity fuji">Fuji</div><div class="tripCity kyoto">Kyoto</div><div class="tripCity nara">Nara</div><div class="tripCity kamakura">Kamakura</div></div><div class="nav" id="dayNav"></div><div id="globalActions"></div><section id="today" class="active"></section><section id="itinerary"></section><section id="journal"></section><section id="stays"></section><section id="packing"></section><div class="credit">Illustrated for our Japan family adventure · Family journal photos stay private to signed-in users.</div></main>
